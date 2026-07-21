@@ -263,9 +263,10 @@
         </div>
 
         <div class="booking-form-wrap reveal reveal-delay">
-          <form class="booking-form" id="booking-form" action="api/book-appointment.php" method="post">
+          <form class="booking-form" id="booking-form" action="https://api.web3forms.com/submit" method="post">
             <div class="form-heading"><span>Consultation request</span><small>Usually confirmed within one business day</small></div>
             <div class="form-grid">
+                <input type="hidden" name="access_key" value="05d7736e-8626-480a-8905-e38312619ef7">
               <label class="field"><span>Full name *</span><input type="text" name="full_name" autocomplete="name" required maxlength="80" placeholder="Your full name"></label>
               <label class="field"><span>Email address *</span><input type="email" name="email" autocomplete="email" required maxlength="120" placeholder="you@company.com"></label>
               <label class="field"><span>Phone / WhatsApp</span><input type="tel" name="phone" autocomplete="tel" maxlength="30" placeholder="+971 50 000 0000"></label>
