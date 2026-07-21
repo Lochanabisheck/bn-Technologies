@@ -1,37 +1,11 @@
 # BN Technologies website
 
-Production-ready static website with a PHP appointment email handler for `bntechnologies.ai`.
+This is a static, responsive website. Open `index.html` in a browser or deploy the folder to any static host.
 
-## Run locally
+## Activate appointment emails
 
-```bash
-php -S 127.0.0.1:8080
-```
+1. Create an access key at [Web3Forms](https://web3forms.com/), using the inbox where BN Technologies should receive requests.
+2. In `index.html`, replace `YOUR_WEB3FORMS_ACCESS_KEY` with the generated key.
+3. Deploy. The appointment form posts directly to Web3Forms and shows success/error feedback to the visitor.
 
-Open `http://127.0.0.1:8080`.
-
-The contact form uses PHP `mail()`. Local delivery only works when a mail transport is configured. The production setup is covered in `GODADDY-DEPLOYMENT.md`.
-
-## Configure booking email
-
-Edit `api/config.php` before publishing:
-
-```php
-$bookingRecipient = 'appointments@bntechnologies.ai';
-$bookingSender = 'website@bntechnologies.ai';
-```
-
-Both addresses should exist on the domain. The recipient receives a formatted booking email and can reply directly to the client.
-
-## Main files
-
-- `index.html`: page content, links, and booking form
-- `styles.css`: complete responsive design system
-- `script.js`: mobile navigation, FAQ, animations, and form validation
-- `api/book-appointment.php`: validation and booking email delivery
-- `api/config.php`: destination and sender email addresses
-- `GODADDY-DEPLOYMENT.md`: domain, hosting, SSL, and testing steps
-
-## Beldex attribution
-
-The website uses public factual references and direct links from the official Beldex website. The official Beldex logo is loaded from Beldex's media-kit URL. BN Technologies is clearly presented as an independent consultancy.
+The form includes name, email, company, phone, service interest, and message. It also contains Web3Forms' honeypot field for basic bot protection.
